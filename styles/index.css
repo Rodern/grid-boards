@@ -26,7 +26,41 @@ html, body {
     color: white;
     text-align: center;
     padding: auto;
-    margin: auto;
-    margin-left: 1%;
+    margin-left: 0%;
     font-size: 2em;
 }
+
+.header .header-menu:hover {
+    width: 49px;
+    height: 96%;
+    color: rgb(224, 224, 224);
+    background-color: rgb(48, 53, 117);
+}
+
+.header .headerName {
+    color: white;
+    margin: auto auto auto 4px;
+}
+
+.side-icons{
+    display: flex;
+}
+
+.side-icons #notif {
+    background-image: url('../rsc/bell icons-2.png');
+    width: 27px;
+    height: 27px;
+    margin: auto 6px;
+    justify-content: center;
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.side-icons #notif:hover {
+    width: 28px;
+    height: 28px;
+    transition: width, height, ease-in-out .3s;
+}
+
