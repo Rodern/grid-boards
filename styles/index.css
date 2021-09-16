@@ -1,66 +1,223 @@
 html, body {
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    bottom: 0%;
-    right: 0%;
-    left: 0%;
-    position: fixed;
-    padding: 0%;
-    margin: 0%;
-    min-height: 100%;
+	height: 100%;
+	width: 100%;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	position: fixed;
+	padding: 0%;
+	margin: 0%;
+	min-height: 100%;
+	font-family: sans-serif;
+	/* background-color: rgb(184, 184, 184); */
 }
 
 .header {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    background-color: rgb(18, 22, 78);
+	display: flex;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	background-color: rgb(18, 22, 78);
 
 }
 
 .header .header-menu {
-    width: 48px;
-    height: 95%;
-    color: white;
-    text-align: center;
-    padding: auto;
-    margin-left: 0%;
-    font-size: 2em;
+	width: 48px;
+	height: 95%;
+	color: white;
+	text-align: center;
+	margin-left: 0%;
+	font-size: 2em;
+	cursor: default;
 }
 
 .header .header-menu:hover {
-    width: 49px;
-    height: 96%;
-    color: rgb(224, 224, 224);
-    background-color: rgb(48, 53, 117);
+	width: 49px;
+	height: 96%;
+	color: rgb(224, 224, 224);
+	background-color: rgb(48, 53, 117);
+}
+
+.menCover {
+	width: 100%;
+	height: 100%;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+.menu {
+	width: 0vw;
+	height: 100vh;
+	background-color: rgba(18, 28, 78, 0.884);
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 50;
+	box-shadow: 0px 0px 2px 0px rgba(34, 34, 34, 0.719);
+}
+
+#menExit {
+	width: 21px;
+	height: 20px;
+	color: black;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-align: center;
+	padding-top: 3px;
+	border-radius: 4px;
+	font-weight: bolder;
+}
+
+#menExit:hover {
+	color: white;
+	background-color: red;
+}
+
+.menu .user_info {
+	width: 100%;
+	height: fit-content;
+	padding-top: 20px;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	cursor: default;
+	box-shadow: 0px 0px 2px 0px rgba(34, 34, 34, 0.719);
+}
+
+.menu .user_info .avatar {
+	width: fit-content;
+	height: fit-content;
+	margin: auto;
+}
+
+ul.menuList {
+	height: fit-content;
+	padding: 2px;
+	margin: 3% 0%;
+	display: inline-flex;
+	flex-direction: column;
+	font-size: 1.2rem;
+}
+
+ul.menuList li:not(.browser-default) {
+	color: white;
+	margin: 0px 1px;
+	padding: 4px 0px 2px 2px;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+}
+
+ul.menuList li:not(.browser-default):hover {
+	color: rgb(18, 22, 78);
+	background-color: rgb(235, 235, 235);
+	border-bottom: none;	
 }
 
 .header .headerName {
-    color: white;
-    margin: auto auto auto 4px;
+	color: white;
+	margin: auto auto auto 4px;
+	cursor: default;
+}
+
+h4.user_name {
+	font-size: 1.2rem;
+	color: black;
 }
 
 .side-icons{
-    display: flex;
+	display: flex;
 }
 
 .side-icons #notif {
-    background-image: url('../rsc/bell icons-2.png');
-    width: 27px;
-    height: 27px;
-    margin: auto 6px;
-    justify-content: center;
-    position: relative;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-image: url('../rsc/bell icons-2.png');
+	width: 27px;
+	height: 27px;
+	margin: auto 6px;
+	justify-content: center;
+	position: relative;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .side-icons #notif:hover {
-    width: 28px;
-    height: 28px;
-    transition: width, height, ease-in-out .3s;
+	width: 28px;
+	height: 28px;
+	transition: width, height, ease-in-out .3s;
 }
 
+.gridBody {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0%;
+	align-content: center;
+	justify-content: center;
+}
+/* 
+.gridBody .grid {
+	width: 40%;
+	height: 23%;
+	display: inline-block;
+	position: relative;
+	background-color: rgb(18, 22, 78);
+	text-align: center;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin: 2px;
+} */
+
+.gridBody .grid {
+	width: 40%;
+	height: 23%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: rgba(197, 197, 197, 0.5);
+	/* background-image: radial-gradient(circle, rgb(18, 22, 78), rgb(44, 52, 165), rgb(18, 22, 78));
+	background-image: radial-gradient( rgb(44, 52, 165) 5%, rgb(18, 22, 78) 90%,  rgb(44, 52, 165) 5%); */
+	text-align: center;
+	color: white;
+	border: 1px solid rgba(18, 22, 78, 0.5);
+	box-shadow: 1px 1px 2px 1px rgba(18 22 78 / 83%);
+	border-radius: 5%;
+	margin: 4px;
+}
+
+.gridBody .grid:hover{
+	background-color: white;
+	transition: ease-in-out 0.3s;
+	color: rgb(18, 22, 78);
+}
+
+.gridBody .grid img {
+	margin: auto;
+}
+
+.gridBody .grid img.selected {
+	width: 50%;
+	height: 50%;
+	margin: auto;
+}
+
+.gridBody .grid svg {
+	width: 45%;
+	height: 45%;
+	margin: auto;
+}
