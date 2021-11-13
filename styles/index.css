@@ -9,7 +9,7 @@ html, body {
 	padding: 0%;
 	margin: 0%;
 	min-height: 100%;
-	font-family: sans-serif;
+	font-family: calibri;
 	/* background-color: rgb(184, 184, 184); */
 }
 
@@ -131,6 +131,7 @@ ul.menuList li:not(.browser-default):hover {
 	color: white;
 	margin: auto auto auto 4px;
 	cursor: default;
+	font-weight: 100;
 }
 
 h4.user_name {
@@ -165,7 +166,7 @@ h4.user_name {
 	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0%;
+	margin: 0;
 	align-content: center;
 	justify-content: center;
 }
@@ -184,8 +185,8 @@ h4.user_name {
 } */
 
 .gridBody .grid {
-	width: 40%;
-	height: 23%;
+	width: calc((100%/2)-5);
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	position: relative;
