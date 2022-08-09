@@ -185,7 +185,7 @@ h4.user_name {
 } */
 
 .gridBody .grid {
-	width: calc((100%/2)-5);
+	width: 45%; /* calc((100%/2)-5);*/ 
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
